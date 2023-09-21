@@ -3,18 +3,20 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
-  const url = 'https://api.datos.gob.mx/v1/condiciones-atmosfericas';
+  const url = 'https://api.datos.gob.mx/v1/condiciones-atmosfericas?state=';
   const estadosMX =[
     {'id':1, 'name':'Aguascalientes'},
     {'id':2, 'name':'Baja California'},
-    {'id':19, 'name':'Nuevo León'},
-    {'id':20, 'name':'Oaxaca'},
-    {'id':21, 'name':'Puebla'},
-    {'id':31, 'name':'Yucatán'},
-    {'id':32, 'name':'Zacatecas'}
+    {'id':3, 'name':'Nuevo León'},
+    {'id':4, 'name':'Oaxaca'},
+    {'id':5, 'name':'Puebla'},
+    {'id':6, 'name':'Yucatan'},
+    {'id':7, 'name':'Zacatecas'},
+    {'id':8, 'name':'Chihuahua'}
   ];
   const [datos,setDatos] = useState([]);
   const [estadoActual,setEstadoActual] = useState('Quintana Roo');
+  const [datosFiltrados, setDatosFiltrados] = useState([]);
 
   const consultarDatos = () =>{
     return fetch(url)
@@ -24,6 +26,14 @@ function App() {
   useEffect(() => {
     consultarDatos();
   },[]);
+
+  const filtrarDatos = () => {
+    setDatosFiltrados(datos.filter((ciudad) => ciudad.state === estadoActual));
+  };
+
+  useEffect(() => {
+    filtrarDatos();
+  }, [estadoActual]);
 
   return (
     <>
@@ -38,10 +48,10 @@ function App() {
      </select>
      {estadoActual}
      <h1>Estado del tiempo</h1>
-     {datos.map((ciudad,index) => {
+     {datosFiltrados.map((ciudad,index) => {
       return(
         <div>
-        <p>{ciudad.name} - <i>{ciudad.skydescriptionlong}</i></p>
+          <p>{ciudad.name} - <i>{ciudad.skydescriptionlong}</i></p>
         </div>
       );
      })}
