@@ -2,8 +2,13 @@
 export const Navbar = () => {
 
     return(
-        <>
-        <h1>Nabvar</h1>
-        </>
+      <div className="Dashbord">
+        <div className="Imagen"></div>
+        <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Estadísticas</a></li>
+        <li><a href="#">Configuración</a></li>
+      </ul>
+      </div>
     );
 }
