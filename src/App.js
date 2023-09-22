@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React, {useEffect, useState} from 'react';
 import './App.css';
 
@@ -36,26 +35,26 @@ function App() {
   }, [estadoActual]);
 
   return (
-    <>
+    <div className='Cuerpo'>
      <select onChange={(e) => setEstadoActual(e.target.value)}
-     >
-      <option value=''>Selecciona una opción</option>
+     className='Select'>
+      <option  value='' className="option">Selecciona una opción</option>
       {estadosMX.map((opcion) => (
         <option  key={opcion.id} value={opcion.name}>
           {opcion.name}
         </option>
       ))}
-     </select>
-     {estadoActual}
-     <h1>Estado del tiempo</h1>
-     {datosFiltrados.map((ciudad,index) => {
-      return(
-        <div>
-          <p>{ciudad.name} - <i>{ciudad.skydescriptionlong}</i></p>
-        </div>
-      );
-     })}
-    </>
+</select>
+  <p className="estado-actual">{estadoActual}</p>
+  <h1 className='tiempo'>Estado del tiempo</h1>
+  {datosFiltrados.map((ciudad, index) => {
+    return (
+      <div>
+        <p className='estados'>{ciudad.name} - <i>{ciudad.skydescriptionlong}</i></p>
+      </div>
+    );
+  })}
+    </div>
   );
 }
 

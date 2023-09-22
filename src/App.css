@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+/* Estilos para el contenedor principal */
+.Cuerpo {
+  background-image: url(./imagen/clima3.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Ajusta la altura al 100% del viewport */
+  padding: 60px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-size:cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilos para los elementos internos dentro del contenedor */
+.Cuerpo > * {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  max-width: 800px; /* Limita la expansión del contenido */
+  margin-left: auto; /* Centra el contenido horizontalmente */
+  margin-right: auto; /* Centra el contenido horizontalmente */ 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Select {
+  border-radius: 40px;
+  margin-bottom: 30px;
+  display: block; /*  establece un elemento como un bloque de nivel de bloque. Los elementos de nivel de bloque ocupan todo el ancho disponible de su contenedor y comienzan en una nueva línea.*/
+  margin: 0 auto; /* establece los márgenes izquierdo y derecho del elemento como "automáticos" */
+  text-align: center; /* Centra el contenido horizontalmente, osea el texto */
+  background-color: black; 
+  padding: 25px; 
   color: white;
+  border: 2px solid #000; /* Ancho de 2 píxeles y sólido, puedes personalizar el color (#000 en este caso) */
+  font-size: 20px;
+}
+.estado-actual {
+  color: rgb(247, 244, 243); /* Color de texto rojo (personalizable) */
+  font-weight: bold; /* Texto en negrita (personalizable) */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgb(214, 193, 167);
+  padding: 4px; /* Añade espacio alrededor del contenido */
+  max-width: 800px; /* Establece el ancho máximo deseado */
+}   
+
+.tiempo {
+  display: block;
+  text-align: center;
+  margin-top: 20px
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.estados {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  
 }
