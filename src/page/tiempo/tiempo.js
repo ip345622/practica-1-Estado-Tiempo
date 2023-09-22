@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import '../../App.css';
 
 function Tiempo() {
-  const url = 'https://api.datos.gob.mx/v1/condiciones-atmosfericas?state=';
+  const url = 'https://api.datos.gob.mx/v1/condiciones-atmosfericas?pageSize=5000';
   
   const estadosMX =[
     {'id':1, 'name':'Aguascalientes'},
@@ -19,10 +19,11 @@ function Tiempo() {
   const [estadoActual,setEstadoActual] = useState('Quintana Roo');
   const [datosFiltrados, setDatosFiltrados] = useState([]);
 
-  const consultarDatos = () =>{
-    return fetch(url)
-      .then((res) => res.json())
-      .then((condicionAtm) => setDatos(condicionAtm.results))
+
+  const consultarDatos = async () =>{
+    const res = await fetch(url);
+    const condicionAtm = await res.json();
+    return setDatos(condicionAtm.results);
   }
   useEffect(() => {
     consultarDatos();
