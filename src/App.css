@@ -5,30 +5,19 @@
     left: 0;
     width: 100%;
     height: 100vh; /* Ajusta la altura al 100% del viewport */
-    padding: 60px;
-    box-sizing: border-box;
+    padding: 45px;
     overflow-y: auto;
     background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
   }
 
-  /* Estilos para los elementos internos dentro del contenedor */
-  .Cuerpo > * {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    max-width: 800px; /* Limita la expansión del contenido */
-    margin-left: auto; /* Centra el contenido horizontalmente */
-    margin-right: auto; /* Centra el contenido horizontalmente */ 
-  }
 
 /* Estilos para el Dashbord */
 .Dashbord {
   background-color:  rgba(9, 9, 9, 0.8);
   color: white;
   width: 200px;
-  padding: 40px;
+  padding: 30px;
   height: 100vh;
   left: 0;
   z-index: 1;
@@ -36,64 +25,124 @@
 }
 
 .Dashbord ul {
-  list-style: none;
-  padding: 0;
+  padding: 20px;
 }
 
 .Dashbord li {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .Dashbord a {
   text-decoration:none; /* se utiliza en CSS para eliminar o desactivar la decoración de texto predeterminada */
   color: white;
-  font-size: 20px;
+  font-size: 25px;
 }
+
+.Imagen {
+  background-image: url(./imagen/perrito.jpg);
+  width: 150px;
+  height: 20%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
 /* Estilos para el selector */
 .Select {
-  border-radius: 40px;
-  margin-bottom: 30px;
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  background-color: black;
-  padding: 25px;
-  color: white;
-  border: 2px solid #000;
-  font-size: 20px;
+  padding: 5px;
+  width: 45%; /* Modifica el valor según tus necesidades */
+  margin-left: auto; /* Esto mueve el cuadro a la derecha */
+  margin-right: 20%; 
+  font-size: 17px;
 }
 
 /* Estilos para el estado actual */
 .estado-actual {
-  color: rgb(247, 244, 243);
-  font-weight: bold;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  margin-top: 20px;
-  background-color: rgb(214, 193, 167);
-  padding: 4px;
-  max-width: 800px;
+  padding: 5px;
+  background-color: rgb(209, 214, 214);
+  width: 45%; /* Modifica el valor según tus necesidades */
+  margin-left: auto; /* Esto mueve el cuadro a la derecha */
+  margin-right: 20%; 
+  border-radius: 20px;
+  font-size: 15px;
 }
 
+.estado-actual:hover {
+  background-color: rgb(128, 200, 237);
+}
 /* Estilos para el título */
 .tiempo {
-  display: block;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  margin-top: 20px;
+  padding: 5px;
+  background-color: rgb(209, 214, 214);
+  width: 45%; /* Modifica el valor según tus necesidades */
+  margin-left: auto; /* Esto mueve el cuadro a la derecha */
+  margin-right: 20%; 
+  border-radius: 20px;
+}
+
+.tiempo:hover {
+  background-color: rgb(128, 200, 237); /* Cambia el color de fondo cuando el mouse está sobre .tiempo */
 }
 
 /* Estilos para los estados */
 .estados {
   margin: 0 auto;
-  text-align: center;
+  text-align:center;
   margin-top: 20px;
 }
 
-.Imagen {
-  background-image: url(./imagen/perrito.jpg);
-  width: 100%;
-  height: 15%;
-  border-radius: 50%;
-  margin-bottom: 50px;
+
+/*Esta es la parte de inicio*/
+
+.Titulo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  width: 45%; /* Modifica el valor según tus necesidades */
+  margin-left: auto; /* Esto mueve el cuadro a la derecha */
+  margin-right: 20%; 
+  border-radius: 20px;
+  font-size: 55px;
 }
 
+.Parrafo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(80, 135, 157, 0.8);
+  width: 50%; /* Modifica el valor según tus necesidades */
+  margin-left: auto; /* Esto mueve el cuadro a la derecha */
+  margin-right: 18%; 
+  border-radius: 20px;
+  font-size: 30px;
+  margin-top: 5%;
+}
+
+.InformacionContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crea columnas con un ancho mínimo de 200px */
+  gap: 20px; /* Espacio entre las columnas */
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 3%;
+  width: 80%;
+}
+
+.Informacion {
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(80, 135, 157, 0.8);
+  border-radius: 30px;
+}

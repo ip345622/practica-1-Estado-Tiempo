@@ -38,9 +38,10 @@ function Tiempo() {
 
   return (
     <div className='Cuerpo'>
+      <h1 className='tiempo'>Estado del tiempo</h1>
       <select onChange={(e) => setEstadoActual(e.target.value)}
         className='Select'>
-        <option value='' className="option">Selecciona una opción</option>
+        <option value='' className="Seleccion">Selecciona una opción</option>
         {estadosMX.map((opcion) => (
           <option key={opcion.id} value={opcion.name}>
             {opcion.name}
@@ -48,7 +49,6 @@ function Tiempo() {
         ))}
       </select>
       <p className="estado-actual">{estadoActual}</p>
-      <h1 className='tiempo'>Estado del tiempo</h1>
       {datosFiltrados.map((ciudad, index) => {
         return (
           <div>
