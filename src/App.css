@@ -70,7 +70,7 @@
   margin-left: auto; /* Esto mueve el cuadro a la derecha */
   margin-right: 20%; 
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .estado-actual:hover {
@@ -94,11 +94,34 @@
 }
 
 /* Estilos para los estados */
-.estados {
-  margin: 0 auto;
-  text-align:center;
-  margin-top: 20px;
+
+.estado-contenedor {
+  display: grid;
+  grid-template-columns: 90%; /* Cada cuadro tendrá el mismo tamaño */
+  justify-content: center;
+  align-items: center;
+  margin-left: 43%;
+  width: 70%;
 }
+
+.estados-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Esto crea 3 columnas igualmente espaciadas */
+  grid-gap: 0px; /* Espacio entre elementos dentro de la cuadrícula */
+}
+
+.estados {
+  background-image: url(./imagen/clima7.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  object-fit: fill;
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(80, 135, 157, 0.8);
+  border-radius: 30px;
+  font-size: 20px;
+}
+
 
 
 /*Esta es la parte de inicio*/
