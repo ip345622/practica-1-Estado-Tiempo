@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Nabvar from './componentes/Nabvar/Navbar.js';
 import App from './App';
 import { CssBaseline } from '@mui/material';
 import { SnackbarProvider } from 'notistack';
@@ -16,6 +17,7 @@ root.render(
   <React.StrictMode>
     <SnackbarProvider>
     <CssBaseline />
+    <Nabvar />
     <App />
     </SnackbarProvider>
   </React.StrictMode>
